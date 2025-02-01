@@ -6,7 +6,7 @@
 #    By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/01 10:21:17 by mmounsif          #+#    #+#              #
-#    Updated: 2025/02/01 12:24:50 by mmounsif         ###   ########.fr        #
+#    Updated: 2025/02/01 17:34:56 by mmounsif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 MLX_FLAGS = -L/usr/local/lib -lmlx -framework OpenGL -framework AppKit
 
-SRC = main.c
+SRC = main.c \
+	src/my_mlx_pixel_put.c
 
 OBJ = $(SRC:.c=.o)
 
