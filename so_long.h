@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:21:25 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/01 12:49:28 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/01 17:18:36 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <mlx.h>
 
-typedef struct	s_data {
+typedef struct s_data {
 	void	*img_ptr;
 	char	*addr;
 	int		bits_per_pixel;
