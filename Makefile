@@ -6,7 +6,7 @@
 #    By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/01 10:21:17 by mmounsif          #+#    #+#              #
-#    Updated: 2025/02/01 17:34:56 by mmounsif         ###   ########.fr        #
+#    Updated: 2025/02/06 18:30:04 by mmounsif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,16 @@ CFLAGS = -Wall -Wextra -Werror
 MLX_FLAGS = -L/usr/local/lib -lmlx -framework OpenGL -framework AppKit
 
 SRC = main.c \
-	src/my_mlx_pixel_put.c
+	src/my_mlx_pixel_put.c \
+	src/get_map.c \
+	src/ft_strlen.c \
+	src/ft_strjoin.c \
+	src/ft_strchr.c \
+	src/ft_strdup.c \
+	src/ft_substr.c \
+	src/get_next_line.c \
+	src/map_line_count.c \
+	src/ft_calloc.c
 
 OBJ = $(SRC:.c=.o)
 
