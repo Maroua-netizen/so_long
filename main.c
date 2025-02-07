@@ -6,11 +6,23 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:25:31 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/06 17:32:30 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/07 11:30:23 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+// void print_tab(char **tab)
+// {
+// 	int i;
+
+// 	i = 0;
+// 	while (tab[i])
+// 	{
+// 		printf("%s", tab[i]);
+// 		i++;
+// 	}	
+// }
 
 int	main(void)
 {
@@ -22,6 +34,7 @@ int	main(void)
 	int		img_height;
 
 	mlx_ptr = mlx_init();
+	// print_tab(get_map("map.ber"));
 	// img.img_ptr = mlx_new_image(mlx_ptr, 640, 352);
 	//tiles are 32x32 pixels so with the resolution above, we will have 20 tiles horizontally and 11 vertically.
 	// img.addr = mlx_get_data_addr(img.img_ptr, &img.bits_per_pixel, 

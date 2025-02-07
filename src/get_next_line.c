@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 20:15:06 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/06 17:19:25 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/07 16:00:41 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,36 +81,3 @@ static int	line_len(char *stash)
 	}
 	return (i);
 }
-
-// #include <fcntl.h>
-// #include <stdio.h>
-// #include <string.h>
-
-// int main()
-// {
-// 	int fd;
-// 	char *content;
-// 	char *next_line;
-// 	int count;
-
-// 	fd = open("test.txt", O_CREAT | O_RDWR, 0644);
-// 	if (fd < 0)
-// 	{
-// 		perror("Error opening file");
-// 		return (1);
-// 	}
-// 	content = "Hello, World\nthis is a test\nThank you for your time\n42";
-// 	write(fd, content, strlen(content));
-// 	lseek(fd, 0, SEEK_SET);
-// 	count = 0;
-// 	while (1)
-// 	{
-// 		next_line = get_next_line(fd);
-// 		if (!next_line)
-// 			break;
-// 		count++;
-// 		printf("Line %d: %s", count, next_line);
-// 		free(next_line);
-// 	}
-// 	close(fd);
-// }

@@ -6,7 +6,7 @@
 #    By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/01 10:21:17 by mmounsif          #+#    #+#              #
-#    Updated: 2025/02/06 18:30:04 by mmounsif         ###   ########.fr        #
+#    Updated: 2025/02/07 13:43:03 by mmounsif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,12 @@ SRC = main.c \
 	src/ft_substr.c \
 	src/get_next_line.c \
 	src/map_line_count.c \
-	src/ft_calloc.c
+	src/ft_calloc.c \
+	src/ft_bzero.c \
+	src/check_map.c \
+	src/exit_start_check.c \
+	src/collectibles_count.c \
+	src/walls_check.c 
 
 OBJ = $(SRC:.c=.o)
 
