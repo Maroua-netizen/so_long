@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 11:38:44 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/08 14:29:37 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/08 14:31:55 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,8 @@ static int	exit_start_check(char **map)
 
 static int	rectangular_check(char **map)
 {
-	int	i;
-	int	j;
-	int	len;
+	int		i;
+	size_t	len;
 
 	len = ft_strlen(map[0]);
 	i = 1;
