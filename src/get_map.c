@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:00:15 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/06 18:45:55 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/08 11:55:44 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	**get_map(char *file_name)
 	line_count = map_line_count(file_name);
 	map = ft_calloc(line_count + 1, sizeof(char *));
 	if (!map)
-		return (perror("allocation failed in get_map"), NULL);
+		return (perror("Error\nallocation failed in get_map"), NULL);
 	fd = open(file_name, O_RDONLY);
 	if (fd < 0)
-		return (perror("Error opening file in get_map"), free(map), NULL);
+		return (perror("Error\nError opening file in get_map"), free(map), NULL);
 	i = 0;
 	while (i < line_count)
 	{

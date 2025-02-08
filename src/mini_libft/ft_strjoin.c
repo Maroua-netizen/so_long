@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 18:41:09 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/06 18:41:12 by mmounsif         ###   ########.fr       */
+/*   Created: 2025/02/06 17:26:47 by mmounsif          #+#    #+#             */
+/*   Updated: 2025/02/08 12:40:29 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	size_t	slen;
-	size_t	i;
+	int		i;
+	int		j;
 
-	if (!s)
+	if (!s1 && !s2)
 		return (NULL);
-	slen = ft_strlen(s);
-	if (start >= slen)
-		return (ft_strdup(""));
-	if (len > slen - start)
-		len = slen - start;
-	str = malloc((len + 1) * sizeof(char));
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	str[len] = '\0';
+	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
 	i = 0;
-	while (i < len) 
+	while (s1[i])
 	{
-		str[i] = s[start + i];
+		str[i] = s1[i];
 		i++;
 	}
+	j = 0;
+	while (s2[j]) 
+		str[i++] = s2[j++];
 	return (str);
 }

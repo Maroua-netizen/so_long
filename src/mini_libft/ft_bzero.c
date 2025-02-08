@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 07:59:29 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/06 18:29:32 by mmounsif         ###   ########.fr       */
+/*   Created: 2024/10/31 14:29:35 by mmounsif          #+#    #+#             */
+/*   Updated: 2025/02/08 12:40:06 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_bzero(void *s, size_t n)
 {
-	void	*ptr;
+	unsigned int	i;
+	unsigned char	*pb;
 
-	if (size != 0 && count > SIZE_MAX / size)
-		return (NULL);
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	pb = (unsigned char *) s;
+	i = 0;
+	while (i < n)
+	{
+		pb[i] = 0;
+		i++;
+	}
 }

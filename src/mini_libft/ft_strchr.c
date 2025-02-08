@@ -6,11 +6,11 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:22:32 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/06 17:31:29 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:40:15 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
 char	*ft_strchr(const char *s, int c)
 {

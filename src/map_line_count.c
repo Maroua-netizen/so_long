@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 18:05:21 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/06 18:42:10 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/08 11:55:52 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	map_line_count(char *file_name)
 	fd = open(file_name, O_RDONLY);
 	if (fd < 0)
 	{
-		perror("Error opening map file during line count");
+		perror("Error\nError opening map file during line count");
 		return (-1);
 	}
 	line_count = 0;

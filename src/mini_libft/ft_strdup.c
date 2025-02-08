@@ -6,11 +6,11 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 17:23:39 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/06 17:23:53 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:40:19 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
 char	*ft_strdup(const char *s1)
 {

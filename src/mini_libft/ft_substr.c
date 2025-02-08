@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 14:29:35 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/07 11:02:41 by mmounsif         ###   ########.fr       */
+/*   Created: 2025/02/06 18:41:09 by mmounsif          #+#    #+#             */
+/*   Updated: 2025/02/08 12:40:38 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	unsigned char	*pb;
+	char	*str;
+	size_t	slen;
+	size_t	i;
 
-	pb = (unsigned char *) s;
+	if (!s)
+		return (NULL);
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
+	str = malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
 	i = 0;
-	while (i < n)
+	while (i < len) 
 	{
-		pb[i] = 0;
+		str[i] = s[start + i];
 		i++;
 	}
+	return (str);
 }

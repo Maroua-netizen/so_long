@@ -6,11 +6,68 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 11:38:44 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/07 17:02:15 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:35:49 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
+
+static int	exit_start_check(char **map)
+{
+	int	i;
+	int	j;
+	int	exit;
+	int	start;
+
+	exit = 0;
+	start = 0;
+	i = 0;
+	while(map[i])
+	{
+		j = 0;
+		while(map[i][j])
+		{
+			if (map[i][j] == 'P')
+				start++;
+			if (map[i][j] == 'E')
+				exit++;
+			j++;
+		}
+		i++;
+	}
+	if (exit != 1 || start != 1)
+		return (perror("Error\nMore than one/no start/exit in the map!"), 0);
+	return (1);
+}
+
+static int	walls_check(char **map)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (map[0][i] != '\n')
+	{
+		if (map[0][i] != '1')
+			return (perror("Error\nTop wall breached!"), 0);
+		i++;
+	}
+	i = 0;
+	while (map[i])
+	{
+		if (map[i][0] != '1' || map[i][ft_strlen(map[i]) - 2] != '1')
+			return (perror("Error\nSide walls breached!"), 0);
+		i++;
+	}
+	j = 0;
+	while (map[i - 1][j] != '\n')
+	{
+		if (map[i - 1][j] != '1')
+			return (perror("Error\nBottom wall breached!"), 0);
+		j++;
+	}
+	return (1);
+}
 
 int	check_map(char *file_name)
 {
@@ -29,11 +86,11 @@ int	check_map(char *file_name)
 		{
 			if (map[i][j] != '0' && map[i][j] != '1' && map[i][j] != 'C' 
 				&& map[i][j] != 'E' && map[i][j] != 'P' && map[i][j] != '\n')
-				return (perror("Invalid char in map!"), free(map), 0);
+				return (perror("Error\nInvalid char in map!"), free_map(map), 0);
 			j++;
 		}
 		i++;
 	}
-	free(map);
+	free_map(map);
 	return (1);
 }

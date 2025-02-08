@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 13:10:47 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/07 13:38:57 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/08 12:46:07 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	collectibles_count(char **map)
 
 	collectibles = 0;
 	i = 0;
-	while(map[i])
+	while (map[i])
 	{
 		j = 0;
-		while(map[i][j])
+		while (map[i][j])
 		{
 			if (map[i][j] == 'C')
 				collectibles++;
@@ -32,6 +32,6 @@ int	collectibles_count(char **map)
 		i++;
 	}
 	if (collectibles < 1)
-		return (perror("No collectibles in map!"), 0);
+		return (perror("Error\nNo collectibles in map!"), 0);
 	return (collectibles);
 }
