@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_line_count.c                                   :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 18:05:21 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/08 16:45:57 by mmounsif         ###   ########.fr       */
+/*   Created: 2024/09/07 20:03:12 by mmounsif          #+#    #+#             */
+/*   Updated: 2025/02/08 16:53:10 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
-int	map_line_count(char *file_name)
+void	ft_puthex(unsigned int n, int i, int *count)
 {
-	int		fd;
-	int		line_count;
-	char	*next_line;
+	char	*hexa0;
+	char	*hexa1;
 
-	fd = open(file_name, O_RDONLY);
-	if (fd < 0)
-	{
-		perror("Error opening map file during line count");
-		return (-1);
-	}
-	line_count = 0;
-	while (1)
-	{
-		next_line = get_next_line(fd);
-		if (!next_line)
-			break ;
-		line_count++;
-		free(next_line);
-	}
-	close(fd);
-	return (line_count);
+	hexa0 = "0123456789abcdef";
+	hexa1 = "0123456789ABCDEF";
+	if (n >= 16)
+		ft_puthex(n / 16, i, count);
+	if (i == 0)
+		write(1, &hexa0[n % 16], 1);
+	else if (i == 1)
+		write(1, &hexa1[n % 16], 1);
+	(*count)++;
 }

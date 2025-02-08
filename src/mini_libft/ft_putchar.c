@@ -1,38 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map_line_count.c                                   :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 18:05:21 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/08 16:45:57 by mmounsif         ###   ########.fr       */
+/*   Created: 2024/08/29 19:07:35 by mmounsif          #+#    #+#             */
+/*   Updated: 2025/02/08 16:51:32 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
-int	map_line_count(char *file_name)
+void	ft_putchar(char c, int *count)
 {
-	int		fd;
-	int		line_count;
-	char	*next_line;
-
-	fd = open(file_name, O_RDONLY);
-	if (fd < 0)
-	{
-		perror("Error opening map file during line count");
-		return (-1);
-	}
-	line_count = 0;
-	while (1)
-	{
-		next_line = get_next_line(fd);
-		if (!next_line)
-			break ;
-		line_count++;
-		free(next_line);
-	}
-	close(fd);
-	return (line_count);
+	write(1, &c, 1);
+	(*count)++;
 }
