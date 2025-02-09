@@ -6,7 +6,7 @@
 #    By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/01 10:21:17 by mmounsif          #+#    #+#              #
-#    Updated: 2025/02/09 11:40:53 by mmounsif         ###   ########.fr        #
+#    Updated: 2025/02/09 13:20:37 by mmounsif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRC = main.c \
 	src/check_map.c \
 	src/collectibles_count.c \
 	src/flood_check.c \
+	src/display_background.c \
 	src/display_map.c 
 
 OBJ = $(SRC:.c=.o)
