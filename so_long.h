@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:21:25 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/09 17:09:58 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/09 18:24:06 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
+
+# define TILE_SIZE 64
 
 typedef struct s_point {
 	int		x;
