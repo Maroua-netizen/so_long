@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:21:25 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/08 17:01:48 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/09 11:57:49 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ int		map_line_count(char *file_name);
 int		check_map(char *file_name);
 int		collectibles_count(char **map);
 int		flood_check(char *file_name);
+void	display_map(char **map, void *mlx_ptr, void	*mlx_win);
 
 #endif
