@@ -6,7 +6,7 @@
 #    By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/01 10:21:17 by mmounsif          #+#    #+#              #
-#    Updated: 2025/02/09 13:20:37 by mmounsif         ###   ########.fr        #
+#    Updated: 2025/02/09 17:08:49 by mmounsif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,6 @@ SRC = main.c \
 	src/mini_libft/ft_putstr.c \
 	src/mini_libft/ft_putunbr.c \
 	src/ft_printf.c \
-	src/my_mlx_pixel_put.c \
 	src/get_next_line.c \
 	src/get_map.c \
 	src/free_map.c \

@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:21:25 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/09 16:14:18 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/09 17:09:58 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,6 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
-
-typedef struct s_data {
-	void	*img_ptr;
-	char	*addr;
-	int		bits_per_pixel;
-	int		line_length;
-	int		endian;
-}				t_data;
 
 typedef struct s_point {
 	int		x;
@@ -52,7 +44,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_printf(const char *format, ...);
-void	my_mlx_pixel_put(t_data *img_ptr, int x, int y, int color);
 char	*get_next_line(int fd);
 char	**get_map(char *file_name);
 void	free_map(char **map);
