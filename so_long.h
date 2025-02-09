@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:21:25 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/09 13:20:13 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/09 16:14:18 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ typedef struct s_data {
 	int		line_length;
 	int		endian;
 }				t_data;
+
+typedef struct s_point {
+	int		x;
+	int		y;
+}				t_point;
 
 size_t	ft_strlen(const char *s);
 void	ft_bzero(void *s, size_t n);
