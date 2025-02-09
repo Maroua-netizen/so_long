@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:25:31 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/08 19:47:32 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/09 10:15:25 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(void)
 	// img.addr = mlx_get_data_addr(img.img_ptr, &img.bits_per_pixel, 
 	// 		&img.line_length, &img.endian);
 	// my_mlx_pixel_put(&img, 5, 5, 0x00FF0000);
-	img = mlx_xpm_file_to_image(mlx_ptr, "textures/Grass.xpm", &img_width, &img_height);
+	img = mlx_xpm_file_to_image(mlx_ptr, "textures/House.xpm", &img_width, &img_height);
 	mlx_win = mlx_new_window(mlx_ptr, img_width, img_height, "Flower Lover <3");
 	mlx_put_image_to_window(mlx_ptr, mlx_win, img, 0, 0);
 	mlx_loop(mlx_ptr);
