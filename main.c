@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:25:31 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/09 18:41:31 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/09 19:53:55 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int ac, char **av)
 {
-	t_vars vars;
+	t_vars	vars;
 	char	**map;
 
 	if (ac == 2)
