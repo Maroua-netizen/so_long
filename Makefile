@@ -6,7 +6,7 @@
 #    By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/01 10:21:17 by mmounsif          #+#    #+#              #
-#    Updated: 2025/02/09 17:08:49 by mmounsif         ###   ########.fr        #
+#    Updated: 2025/02/09 18:50:31 by mmounsif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ SRC = main.c \
 	src/collectibles_count.c \
 	src/flood_check.c \
 	src/display_background.c \
-	src/display_map.c 
+	src/display_map.c \
+	src/key_hook.c 
 
 OBJ = $(SRC:.c=.o)
 

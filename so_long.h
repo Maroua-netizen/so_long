@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:21:25 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/09 18:24:06 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/09 18:50:12 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,17 @@
 # include <limits.h>
 # include <stdarg.h>
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
+# define BUFFER_SIZE 42
 # define TILE_SIZE 64
 
 typedef struct s_point {
 	int		x;
 	int		y;
 }				t_point;
+typedef struct s_vars {
+	void	*mlx_ptr;
+	void	*mlx_win;
+}				t_vars;
 
 size_t	ft_strlen(const char *s);
 void	ft_bzero(void *s, size_t n);
@@ -55,5 +56,6 @@ int		collectibles_count(char **map);
 int		flood_check(char *file_name);
 void	display_background(char **map, void *mlx_ptr, void	*mlx_win);
 void	display_map(char **map, void *mlx_ptr, void	*mlx_win);
+int		key_hook(int keycode, t_vars *vars);
 
 #endif
