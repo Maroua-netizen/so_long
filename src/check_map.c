@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 11:38:44 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/08 17:06:57 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/14 13:22:57 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	char_check(char **map)
 	while (map[i])
 	{
 		j = 0;
-		while (map[i][j] != '\n')
+		while (map[i][j] && map[i][j] != '\n')
 		{
 			if (map[i][j] != '0' && map[i][j] != '1' && map[i][j] != 'C' 
 				&& map[i][j] != 'E' && map[i][j] != 'P')
@@ -63,14 +63,21 @@ static int	exit_start_check(char **map)
 
 static int	rectangular_check(char **map)
 {
-	int		i;
-	size_t	len;
+	int	i;
+	int	j;
+	int	len;
 
-	len = ft_strlen(map[0]);
+	j = 0;
+	while (map[0][j] && map[0][j] != '\n')
+		j++;
+	len = j;
 	i = 1;
 	while (map[i])
 	{
-		if (ft_strlen(map[i]) != len)
+		j = 0;
+		while (map[i][j] && map[i][j] != '\n')
+			j++;
+		if (j != len)
 			return (ft_printf("Error\nMap not rectangular!"), 0);
 		i++;
 	}
@@ -97,7 +104,7 @@ static int	walls_check(char **map)
 		i++;
 	}
 	j = 0;
-	while (map[i - 1][j] != '\n')
+	while (map[i - 1][j] && map[i - 1][j] != '\n')
 	{
 		if (map[i - 1][j] != '1')
 			return (ft_printf("Error\nBottom wall breached!"), 0);
@@ -106,16 +113,19 @@ static int	walls_check(char **map)
 	return (1);
 }
 
-int	check_map(char *file_name)
+void	check_map(char *file_name)
 {
 	char	**map;
 
 	map = get_map(file_name);
 	if (!map)
-		return (perror("Couldn't get map during check!"), 0);
+		perror("Couldn't get map during check!");
 	if (!char_check(map) || !exit_start_check(map)
-		|| !collectibles_count(map) || !rectangular_check(map) 
+		|| !collectibles_count(map) || !rectangular_check(map)
 		|| !walls_check(map) || !flood_check(file_name))
-		return (free_map(map), 0);
-	return (free_map(map), 1);
+	{
+		free_map(map);
+		exit(1);
+	}
+	free_map(map);
 }
