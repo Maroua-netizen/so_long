@@ -6,34 +6,11 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:59:46 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/08 17:08:10 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/14 16:27:56 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
-
-static void	get_start(char **map, int *row, int *column)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (map[i])
-	{
-		j = 0;
-		while (map[i][j] != '\n')
-		{
-			if (map[i][j] == 'P')
-			{
-				*row = i;
-				*column = j;
-				return ;
-			}
-			j++;
-		}
-		i++;
-	}
-}
 
 static int	check_exit(char **map, int row, int column)
 {
