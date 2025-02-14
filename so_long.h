@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:21:25 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/14 16:54:54 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/14 19:02:41 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_vars {
 	void	*mlx_ptr;
 	void	*mlx_win;
 	char	**map;
+	int		moves;
 }				t_vars;
 
 size_t	ft_strlen(const char *s);
@@ -58,7 +59,6 @@ void	get_start(char **map, int *row, int *column);
 int		flood_check(char *file_name);
 void	display_background(char **map, void *mlx_ptr, void	*mlx_win);
 void	display_map(char **map, void *mlx_ptr, void	*mlx_win);
-int		key_hook(int keycode, t_vars *vars);
-void	move_player(t_vars *vars, int x, int y);
+int		exit_game(t_vars *vars);
 
 #endif

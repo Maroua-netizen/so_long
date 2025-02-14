@@ -6,7 +6,7 @@
 #    By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/01 10:21:17 by mmounsif          #+#    #+#              #
-#    Updated: 2025/02/14 16:47:34 by mmounsif         ###   ########.fr        #
+#    Updated: 2025/02/14 19:02:46 by mmounsif         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,7 @@ SRC = main.c \
 	src/flood_check.c \
 	src/display_background.c \
 	src/display_map.c \
-	src/key_hook.c \
-	src/move_player.c 
+	src/exit_game.c 
 
 OBJ = $(SRC:.c=.o)
 

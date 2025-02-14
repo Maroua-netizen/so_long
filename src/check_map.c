@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 11:38:44 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/14 13:22:57 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/14 19:12:42 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,9 +120,15 @@ void	check_map(char *file_name)
 	map = get_map(file_name);
 	if (!map)
 		perror("Couldn't get map during check!");
-	if (!char_check(map) || !exit_start_check(map)
-		|| !collectibles_count(map) || !rectangular_check(map)
-		|| !walls_check(map) || !flood_check(file_name))
+	if (!collectibles_count(map))
+	{
+		ft_printf("Error\nNo collectibles in map!");
+		free_map(map);
+		exit(1);
+	}
+	if (!char_check(map) || !exit_start_check(map) 
+		|| !rectangular_check(map) || !walls_check(map)
+		|| !flood_check(file_name))
 	{
 		free_map(map);
 		exit(1);
