@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:59:46 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/14 16:27:56 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/14 17:06:20 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ int	flood_check(char *file_name)
 	int		column;
 
 	map = get_map(file_name);
-	row = 1;
-	column = 1;
 	get_start(map, &row, &column);
 	if (!check_exit(map, row, column))
 		return (free_map(map), ft_printf("Error\nExit not accessible!"), 0);
