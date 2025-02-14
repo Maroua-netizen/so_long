@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_hook.c                                         :+:      :+:    :+:   */
+/*   move_player.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/09 18:49:13 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/14 17:51:49 by mmounsif         ###   ########.fr       */
+/*   Created: 2025/02/14 16:12:55 by mmounsif          #+#    #+#             */
+/*   Updated: 2025/02/14 17:47:12 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-int	key_hook(int keycode, t_vars *vars)
+void	move_player(t_vars *vars, int x, int y)
 {
-	if (keycode == 53)
-		exit(0);
-	if (keycode == 13 || keycode == 126)
-		move_player(vars, -1, 0);
-	else if (keycode == 1 || keycode == 125)
-		move_player(vars, 1, 0);
-	else if (keycode == 0 || keycode == 123)
-		move_player(vars, 0, -1);
-	else if (keycode == 2 || keycode == 124)
-		move_player(vars, 0, 1);
-	return (0);
+	int	row;
+	int	column;
+
+	get_start(vars->map, &row, &column);
+	if (vars->map[row + x][column + y] != '1')
+	{
+		vars->map[row][column] = '0';
+		vars->map[row + x][column + y] = 'P';
+		display_background(vars->map, vars->mlx_ptr, vars->mlx_win);
+		display_map(vars->map, vars->mlx_ptr, vars->mlx_win);
+	}
 }
