@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:25:31 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/15 14:00:33 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/15 15:41:40 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ int	main(int ac, char **av)
 	int		win_width;
 
 	if (ac != 2)
-		return (ft_printf("Error\nToo many or no parameters!"), 1);
+		return (ft_printf("Error\nToo many or no parameters!\n"), 1);
 	check_map(av[1]);
 	vars.mlx_ptr = mlx_init();
 	vars.map = get_map(av[1]);
 	win_height = TILE_SIZE * map_line_count(av[1]);
 	win_width = TILE_SIZE * (ft_strlen(vars.map[0]) - 1);
 	if (win_height > SCREEN_HEIGHT || win_width > SCREEN_WIDTH)
-		return (ft_printf("Error\nWindow too big for screen!"),
+		return (ft_printf("Error\nWindow too big for screen!\n"),
 			free_map(vars.map), 1);
 	vars.mlx_win = mlx_new_window(vars.mlx_ptr, win_width, 
 			win_height, "Flower Lover <3");

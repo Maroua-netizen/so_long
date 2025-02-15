@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:59:46 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/15 12:04:42 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/15 15:14:15 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	flood_check(char *file_name)
 	map = get_map(file_name);
 	get_start(map, &row, &column);
 	if (!check_exit(map, row, column))
-		return (free_map(map), ft_printf("Error\nExit not accessible!"), 0);
+		return (free_map(map), ft_printf("Error\nExit not accessible!\n"), 0);
 	free_map(map);
 	map = get_map(file_name);
 	collectibles = 0;
@@ -61,6 +61,6 @@ int	flood_check(char *file_name)
 	map = get_map(file_name);
 	if (collectibles != collectibles_count(map))
 		return (free_map(map), 
-			ft_printf("Error\nCollectibles not accessible!"), 0);
+			ft_printf("Error\nCollectibles not accessible!\n"), 0);
 	return (free_map(map), 1);
 }
