@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:21:25 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/14 19:02:41 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/15 13:51:55 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 
 # define BUFFER_SIZE 42
 # define TILE_SIZE 64
+# define SCREEN_HEIGHT 2880
+# define SCREEN_WIDTH 5120
 
 typedef struct s_point {
 	int		x;
