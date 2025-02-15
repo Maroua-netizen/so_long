@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:25:31 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/14 19:07:34 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:08:22 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int ac, char **av)
 		free_map(vars.map);
 	}
 	else
-		return (ft_printf("Too many or no parameters!"), 1);
+		return (ft_printf("Error\nToo many or no parameters!"), 1);
 }
 
 static int	key_hook(int keycode, t_vars *vars)
