@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:59:46 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/14 17:06:20 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/15 12:04:42 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ static int	check_exit(char **map, int row, int column)
 static void	check_collectibles(char **map, int row, int column,
 							int *collectibles)
 {
-	if (map[row][column] == '1' || map[row][column] == 'V')
+	if (map[row][column] == '1' || map[row][column] == 'E' 
+		|| map[row][column] == 'V')
 		return ;
 	if (map[row][column] == 'C')
 		(*collectibles)++;
