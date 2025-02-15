@@ -6,7 +6,7 @@
 /*   By: mmounsif <mmounsif@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 10:25:31 by mmounsif          #+#    #+#             */
-/*   Updated: 2025/02/15 15:41:40 by mmounsif         ###   ########.fr       */
+/*   Updated: 2025/02/15 16:20:52 by mmounsif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int ac, char **av)
 		return (ft_printf("Error\nWindow too big for screen!\n"),
 			free_map(vars.map), 1);
 	vars.mlx_win = mlx_new_window(vars.mlx_ptr, win_width, 
-			win_height, "Flower Lover <3");
+			win_height, "so_long");
 	display_background(vars.map, vars.mlx_ptr, vars.mlx_win);
 	display_map(vars.map, vars.mlx_ptr, vars.mlx_win);
 	vars.moves = 0;
