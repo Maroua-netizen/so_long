@@ -6,6 +6,12 @@ This project is a very small 2D game compatible with Macos.
 
 The player’s goal is to collect every flower present on the map, then enter the house choosing the shortest possible route.
 
+## Video Demo
+
+Watch a demo of the game:
+
+<iframe width="560" height="315" src="https://github.com/user-attachments/assets/e1f84493-bcaf-48e9-a380-e02174497793" frameborder="0" allowfullscreen></iframe>
+
 ## Dependencies
 
 In order to be able to play this game, you need to first install Minilibx on your computer. Below is a git repository where you can find it:
