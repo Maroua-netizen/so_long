@@ -8,7 +8,7 @@ The player’s goal is to collect every flower present on the map, then enter th
 
 ## Video Demo
 
-[Watch a demo of the game!](https://github.com/user-attachments/assets/e1f84493-bcaf-48e9-a380-e02174497793)
+[Watch a demo of the game!](https://github.com/user-attachments/assets/561d7775-4a66-4338-a98c-9fe37395a951)
 
 ## Dependencies
 
